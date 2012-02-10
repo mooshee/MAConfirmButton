@@ -290,4 +290,9 @@
 	self.selected = NO;
 }
 
+- (void)reset {
+    confirmed = NO;
+    [self cancel];
+}
+
 @end
