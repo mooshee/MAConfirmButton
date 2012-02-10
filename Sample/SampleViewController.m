@@ -52,11 +52,17 @@
 	MAConfirmButton *disabledButton = [MAConfirmButton buttonWithDisabledTitle:@"DISABLED"];
 	[disabledButton setAnchor:CGPointMake(270, 150)];		
 	[self.view addSubview:disabledButton];
+    
+	MAConfirmButton *accessibleButton = [MAConfirmButton buttonWithTitle:@"Accessible Touch" confirm:@"Easier? Isn't it?"];
+	[accessibleButton addTarget:self action:@selector(confirmAction:) forControlEvents:UIControlEventTouchUpInside];
+	[accessibleButton setAnchor:CGPointMake(270, 200)];
+    [accessibleButton setEnsureAccessibleTouch:YES];
+	[self.view addSubview:accessibleButton];
 	
 	resetButton = [MAConfirmButton buttonWithTitle:@"Reset" confirm:@"Are you sure?"];
 	[resetButton addTarget:self action:@selector(resetUI) forControlEvents:UIControlEventTouchUpInside];
 	[resetButton setTintColor:[UIColor colorWithRed:0.694 green:0.184 blue:0.196 alpha:1]];
-	[resetButton setAnchor:CGPointMake(270, 250)];
+	[resetButton setAnchor:CGPointMake(270, 300)];
 	[self.view addSubview:resetButton];
 	
 }
