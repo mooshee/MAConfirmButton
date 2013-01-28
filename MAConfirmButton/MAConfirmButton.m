@@ -6,7 +6,6 @@
 //
 
 #import "MAConfirmButton.h"
-#import "UIColor-Expanded.h"
 
 #define kHeight 26.0
 #define kPadding 20.0
@@ -272,7 +271,23 @@
 }
 
 - (void)setTintColor:(UIColor *)color{
-    self.tint = [UIColor colorWithHue:color.hue saturation:color.saturation+0.15 brightness:color.brightness alpha:1];
+	// Slightly raise the saturation. However, this requires an iOS 5 method, so check if it exists:
+	if ([color respondsToSelector:@selector(getHue:saturation:brightness:alpha:)]) {
+		CGFloat hue = 0.0f, saturation = 0.0f, brightness = 0.0f;
+		CGFloat alpha = 1.0f;
+		BOOL success = [color getHue:&hue saturation:&saturation brightness:&brightness alpha:nil];
+		if (success) {
+			self.tint = [UIColor colorWithHue:hue saturation:saturation+0.15 brightness:brightness alpha:alpha];
+		} else {
+			// Fallback in case getHue:saturation:brightness:alpha: failed
+			self.tint = color;
+		}
+	} else {
+		// Can't get HSB components (iOS <= 4.x). So just use the original color
+		// passed without raising saturation. No big visual difference anyhow.
+		self.tint = color;
+	}
+	
     colorLayer.backgroundColor = tint.CGColor;
     [self setNeedsDisplay];
 }

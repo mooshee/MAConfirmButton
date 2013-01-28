@@ -17,7 +17,6 @@
 		270FBCD1134BA43800EEA99B /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270FBCD0134BA43800EEA99B /* SampleViewController.m */; };
 		270FBCD4134BA43800EEA99B /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270FBCD2134BA43800EEA99B /* SampleViewController.xib */; };
 		27913F4D134BA46D00FBEB69 /* MAConfirmButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 27913F4A134BA46D00FBEB69 /* MAConfirmButton.m */; };
-		27913F4E134BA46D00FBEB69 /* UIColor-Expanded.m in Sources */ = {isa = PBXBuildFile; fileRef = 27913F4C134BA46D00FBEB69 /* UIColor-Expanded.m */; };
 		27913F51134BA4E700FBEB69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27913F50134BA4E700FBEB69 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +37,6 @@
 		270FBCD3134BA43800EEA99B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SampleViewController.xib; sourceTree = "<group>"; };
 		27913F49134BA46D00FBEB69 /* MAConfirmButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAConfirmButton.h; sourceTree = "<group>"; };
 		27913F4A134BA46D00FBEB69 /* MAConfirmButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAConfirmButton.m; sourceTree = "<group>"; };
-		27913F4B134BA46D00FBEB69 /* UIColor-Expanded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Expanded.h"; sourceTree = "<group>"; };
-		27913F4C134BA46D00FBEB69 /* UIColor-Expanded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Expanded.m"; sourceTree = "<group>"; };
 		27913F50134BA4E700FBEB69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -117,8 +114,6 @@
 			children = (
 				27913F49134BA46D00FBEB69 /* MAConfirmButton.h */,
 				27913F4A134BA46D00FBEB69 /* MAConfirmButton.m */,
-				27913F4B134BA46D00FBEB69 /* UIColor-Expanded.h */,
-				27913F4C134BA46D00FBEB69 /* UIColor-Expanded.m */,
 			);
 			path = MAConfirmButton;
 			sourceTree = SOURCE_ROOT;
@@ -187,7 +182,6 @@
 				270FBCCB134BA43800EEA99B /* SampleAppDelegate.m in Sources */,
 				270FBCD1134BA43800EEA99B /* SampleViewController.m in Sources */,
 				27913F4D134BA46D00FBEB69 /* MAConfirmButton.m in Sources */,
-				27913F4E134BA46D00FBEB69 /* UIColor-Expanded.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
