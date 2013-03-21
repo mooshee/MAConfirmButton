@@ -351,5 +351,43 @@
     self.selected = NO;
 }
 
+- (void)reset {
+    confirmed = NO;
+    [self cancel];
+}
+
+#pragma mark - Accessible touch
+
+- (void)updateTouchBounds {
+    CGRect bounds = self.frame; 
+    bounds.origin.x = bounds.origin.y = 0;
+    if (ensureAccessibleTouch) {
+        if (bounds.size.width < 44) {
+            CGFloat delta = 44 - bounds.size.width;
+            bounds.origin.x -= delta / 2;
+            bounds.size.width += delta;
+        }
+        if (bounds.size.height < 44) {
+            CGFloat delta = 44 - bounds.size.height;
+            bounds.origin.y -= delta / 2;
+            bounds.size.height += delta;
+        }
+    }
+    touchBounds = bounds;
+}
+
+- (void)setEnsureAccessibleTouch:(BOOL)flag {
+    ensureAccessibleTouch = flag;
+    [self updateTouchBounds];
+}
+
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    [self updateTouchBounds];
+}
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    return CGRectContainsPoint(touchBounds, point) ? self : nil;
+}
 
 @end

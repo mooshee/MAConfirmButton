@@ -53,16 +53,22 @@
   [disabledButton setAnchor:CGPointMake(200, 150)];		
   [self.view addSubview:disabledButton];
   
+  MAConfirmButton *accessibleButton = [MAConfirmButton buttonWithTitle:@"Accessible Touch" confirm:@"Easier? Isn't it?"];
+  [accessibleButton addTarget:self action:@selector(confirmAction:) forControlEvents:UIControlEventTouchUpInside];
+  [accessibleButton setAnchor:CGPointMake(270, 200)];
+  [accessibleButton setEnsureAccessibleTouch:YES];
+  [self.view addSubview:accessibleButton];
+  
   MAConfirmButton *toggleRightButton = [MAConfirmButton buttonWithTitle:@"$0.99" confirm:@"Toggled to Right"];
   toggleRightButton.toggleAnimation = MAConfirmButtonToggleAnimationRight;
   [toggleRightButton addTarget:self action:@selector(confirmAction:) forControlEvents:UIControlEventTouchUpInside];
-  [toggleRightButton setAnchor:CGPointMake(200, 200)];
+  [toggleRightButton setAnchor:CGPointMake(200, 250)];
   [self.view addSubview:toggleRightButton];
   
   resetButton = [MAConfirmButton buttonWithTitle:@"Reset" confirm:@"Are you sure?"];
   [resetButton addTarget:self action:@selector(resetUI) forControlEvents:UIControlEventTouchUpInside];
   [resetButton setTintColor:[UIColor colorWithRed:0.694 green:0.184 blue:0.196 alpha:1]];
-  [resetButton setAnchor:CGPointMake(200, 250)];
+  [resetButton setAnchor:CGPointMake(200, 300)];
   [self.view addSubview:resetButton];
   
 }

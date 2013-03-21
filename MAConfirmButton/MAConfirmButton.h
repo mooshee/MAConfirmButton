@@ -25,6 +25,8 @@ typedef enum {
 	CALayer *colorLayer;
 	CALayer *darkenLayer;
 	UIButton *cancelOverlay;
+    BOOL ensureAccessibleTouch;
+    CGRect touchBounds;
 }
 
 @property (nonatomic, assign) MAConfirmButtonToggleAnimation toggleAnimation;
@@ -36,5 +38,7 @@ typedef enum {
 - (void)disableWithTitle:(NSString *)disabledString;
 - (void)setAnchor:(CGPoint)anchor;
 - (void)setTintColor:(UIColor *)color;
+- (void)setEnsureAccessibleTouch:(BOOL)flag;
+- (void)reset;
 
 @end
