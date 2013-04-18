@@ -18,6 +18,7 @@
 		270FBCD4134BA43800EEA99B /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270FBCD2134BA43800EEA99B /* SampleViewController.xib */; };
 		27913F4D134BA46D00FBEB69 /* MAConfirmButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 27913F4A134BA46D00FBEB69 /* MAConfirmButton.m */; };
 		27913F51134BA4E700FBEB69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27913F50134BA4E700FBEB69 /* QuartzCore.framework */; };
+		A6EF79E3171F9E1300814DD1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EF79E2171F9E1300814DD1 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		27913F49134BA46D00FBEB69 /* MAConfirmButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAConfirmButton.h; sourceTree = "<group>"; };
 		27913F4A134BA46D00FBEB69 /* MAConfirmButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAConfirmButton.m; sourceTree = "<group>"; };
 		27913F50134BA4E700FBEB69 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A6EF79E2171F9E1300814DD1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		270FBCAB134BA43800EEA99B = {
 			isa = PBXGroup;
 			children = (
+				A6EF79E2171F9E1300814DD1 /* Default-568h@2x.png */,
 				27913F48134BA46D00FBEB69 /* MAConfirmButton */,
 				270FBCC0134BA43800EEA99B /* Sample */,
 				270FBCB9134BA43800EEA99B /* Frameworks */,
@@ -168,6 +171,7 @@
 				270FBCC5134BA43800EEA99B /* InfoPlist.strings in Resources */,
 				270FBCCE134BA43800EEA99B /* MainWindow.xib in Resources */,
 				270FBCD4134BA43800EEA99B /* SampleViewController.xib in Resources */,
+				A6EF79E3171F9E1300814DD1 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,10 +255,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -265,9 +271,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Sample/Sample-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Sample/Sample-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;

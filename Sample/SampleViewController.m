@@ -18,9 +18,6 @@
 
 @implementation SampleViewController
 
-- (void)dealloc{
-  [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning{
   [super didReceiveMemoryWarning];

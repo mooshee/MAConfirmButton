@@ -16,7 +16,7 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *confirm;
 @property (nonatomic, copy) NSString *disabled;
-@property (nonatomic, retain) UIColor *tint;
+@property (nonatomic, strong) UIColor *tint;
 
 - (void)toggle;
 - (void)setupLayers;
@@ -30,28 +30,21 @@
 
 @synthesize title, confirm, disabled, tint, toggleAnimation;
 
-- (void)dealloc{
-    [title release];
-    [confirm release];
-    [disabled release];
-    [tint release];
-    [super dealloc];
-}
 
 + (MAConfirmButton *)buttonWithTitle:(NSString *)titleString confirm:(NSString *)confirmString{	
-    MAConfirmButton *button = [[[super alloc] initWithTitle:titleString confirm:confirmString] autorelease];	
+    MAConfirmButton *button = [[super alloc] initWithTitle:titleString confirm:confirmString];	
     return button;
 }
 
 + (MAConfirmButton *)buttonWithDisabledTitle:(NSString *)disabledString{	
-    MAConfirmButton *button = [[[super alloc] initWithDisabledTitle:disabledString] autorelease];	
+    MAConfirmButton *button = [[super alloc] initWithDisabledTitle:disabledString];	
     return button;
 }
 
 - (id)initWithDisabledTitle:(NSString *)disabledString{
     self = [super initWithFrame:CGRectZero];
     if(self != nil){
-        disabled = [disabledString retain];
+        disabled = disabledString;
 
         toggleAnimation = MAConfirmButtonToggleAnimationLeft;
 
@@ -81,8 +74,8 @@
 - (id)initWithTitle:(NSString *)titleString confirm:(NSString *)confirmString{
     self = [super initWithFrame:CGRectZero];
     if(self != nil){
-        self.title = [titleString retain];
-        self.confirm = [confirmString retain];
+        self.title = titleString;
+        self.confirm = confirmString;
 
         toggleAnimation = MAConfirmButtonToggleAnimationLeft;
 
@@ -259,7 +252,7 @@
 }
 
 - (void)disableWithTitle:(NSString *)disabledString{
-    self.disabled = [disabledString retain];    
+    self.disabled = disabledString;    
     [self toggle];	
 }
 
