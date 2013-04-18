@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		270FBCBB134BA43800EEA99B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270FBCBA134BA43800EEA99B /* UIKit.framework */; };
 		270FBCBD134BA43800EEA99B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270FBCBC134BA43800EEA99B /* Foundation.framework */; };
-		270FBCBF134BA43800EEA99B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270FBCBE134BA43800EEA99B /* CoreGraphics.framework */; };
 		270FBCC5134BA43800EEA99B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 270FBCC3134BA43800EEA99B /* InfoPlist.strings */; };
 		270FBCC8134BA43800EEA99B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 270FBCC7134BA43800EEA99B /* main.m */; };
 		270FBCCB134BA43800EEA99B /* SampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 270FBCCA134BA43800EEA99B /* SampleAppDelegate.m */; };
@@ -17,8 +16,9 @@
 		270FBCD1134BA43800EEA99B /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 270FBCD0134BA43800EEA99B /* SampleViewController.m */; };
 		270FBCD4134BA43800EEA99B /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270FBCD2134BA43800EEA99B /* SampleViewController.xib */; };
 		27913F4D134BA46D00FBEB69 /* MAConfirmButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 27913F4A134BA46D00FBEB69 /* MAConfirmButton.m */; };
-		27913F51134BA4E700FBEB69 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27913F50134BA4E700FBEB69 /* QuartzCore.framework */; };
 		A6EF79E3171F9E1300814DD1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A6EF79E2171F9E1300814DD1 /* Default-568h@2x.png */; };
+		A6EF79E4171F9F5A00814DD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270FBCBE134BA43800EEA99B /* CoreGraphics.framework */; };
+		A6EF79E5171F9F6200814DD1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27913F50134BA4E700FBEB69 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +47,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27913F51134BA4E700FBEB69 /* QuartzCore.framework in Frameworks */,
+				A6EF79E5171F9F6200814DD1 /* QuartzCore.framework in Frameworks */,
+				A6EF79E4171F9F5A00814DD1 /* CoreGraphics.framework in Frameworks */,
 				270FBCBB134BA43800EEA99B /* UIKit.framework in Frameworks */,
 				270FBCBD134BA43800EEA99B /* Foundation.framework in Frameworks */,
-				270FBCBF134BA43800EEA99B /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
